@@ -1,18 +1,42 @@
-var todos = [
-    "clean room",
-    "brush teeth",
-    "exercise",
-    "study javascript",
-    "eat healthy"
+var database = [
+    {
+        username: "john",
+        password: "superyam"
+    },
+    {
+        username: "blessing",
+        password: "123"
+    },
+    {
+        username: "ibrahim",
+        password: "tunji"
+    }
 ];
 
-var todosLenght = todos.length;
-// for (var i=0; i < todosLenght; i++) {
-//     todos.pop();
-// }
+var newsfeed = [
+    {
+        username: "Bobby",
+        timeline: "So tired from all that learning!"
+    },
+    {
+        username: "Sally",
+        timeline: "Javascript is soooo cool!"
+    },
+    {
+        username: "Mitchael",
+        timeline: "Javascript is kinda fun!"
+    }
+];
 
-// var counterOne = 10;
-// while (counterOne > 0) {
-//     console.log(counterOne);
-//     counterOne--
-// }
+function signIn(username, password) {
+    if (username === database[0].username && password === database[0].password){
+    console.log(newsfeed);
+    } else {
+        alert("sorry, wrong username and password");
+    }
+}
+
+var userNamePrompt = prompt("What\'s your username?");
+var passwordPrompt = prompt("What\'s your password");
+
+signIn(userNamePrompt, passwordPrompt);
